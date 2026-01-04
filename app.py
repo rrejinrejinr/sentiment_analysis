@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-df = pd.read_excel("amazon.xlsx",  encoding="latin1",engine="python", on_bad_lines="skip")
+df = pd.read_excel("amazon.xlsx")
 df = df[['Text', 'Score']]
 df.dropna(inplace=True)
 df['Text'] = df['Text'].astype(str)
